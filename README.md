@@ -1,2 +1,2 @@
-# git-repo
+# repo
 The multiple repository tool
