@@ -1,0 +1,33 @@
+TODO
+Created Thu Jan 14 15:56:47 AKST 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
++++ Thu Jan 14 15:56:47 AKST 2016 - repo sync in ~/git fails:
+
+covellite:~/git$ repo sync
+Traceback (most recent call last):
+  File "/home/marcilr/git/.repo/repo/main.py", line 531, in <module>
+    _Main(sys.argv[1:])
+  File "/home/marcilr/git/.repo/repo/main.py", line 507, in _Main
+    result = repo._Run(argv) or 0
+  File "/home/marcilr/git/.repo/repo/main.py", line 158, in _Run
+    copts, cargs = cmd.OptionParser.parse_args(argv)
+  File "/home/marcilr/git/.repo/repo/command.py", line 67, in OptionParser
+    self._Options(self._optparse)
+  File "/home/marcilr/git/.repo/repo/subcmds/sync.py", line 186, in _Options
+    self.jobs = self.manifest.default.sync_j
+  File "/home/marcilr/git/.repo/repo/manifest_xml.py", line 352, in default
+    self._Load()
+  File "/home/marcilr/git/.repo/repo/manifest_xml.py", line 420, in _Load
+    self._ParseManifest(nodes)
+  File "/home/marcilr/git/.repo/repo/manifest_xml.py", line 473, in _ParseManife        st
+    remote = self._ParseRemote(node)
+  File "/home/marcilr/git/.repo/repo/manifest_xml.py", line 646, in _ParseRemote
+    return _XmlRemote(name, alias, fetch, manifestUrl, review, revision)
+  File "/home/marcilr/git/.repo/repo/manifest_xml.py", line 76, in __init__
+    self.resolvedFetchUrl = self._resolveFetchUrl()
+  File "/home/marcilr/git/.repo/repo/manifest_xml.py", line 86, in _resolveFetch        Url
+    manifestUrl = self.manifestUrl.rstrip('/')
+AttributeError: 'NoneType' object has no attribute 'rstrip'
+covellite:~/git$
