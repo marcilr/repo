@@ -12,10 +12,5 @@ command-reference.txt
 links.txt
   Syntax related links
 
-README.md
-  Great use of repo and steps 1-6 this is what I want to implement.
-  kergoth/oe-repo-manifest
-  https://github.com/kergoth/oe-repo-manifest
-
 syntax.txt
   Syntax
