@@ -1,0 +1,22 @@
+links.txt
+Created Tue Nov 10 09:10:52 AKST 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Repo related links
+
+
+Links
+=====
+Developing
+http://source.android.com/source/developing.html
+
+Establishing a Build Environment
+http://source.android.com/source/initializing.html
+
+Installing Repo
+http://source.android.com/source/downloading.html#installing-repo
+
+git-repo
+repo - The multiple repository tool
+https://code.google.com/p/git-repo/

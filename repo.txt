@@ -1,0 +1,78 @@
+repo.txt
+Created Tue Nov 10 09:09:13 AKST 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+repo - The multiple repository tool
+
+
+Repo is a tool that we built on top of Git.  Repo helps us manage the many Git
+repositories, does the uploads to our revision control system, and automates
+parts of the Android development workflow.  Repo is not meant to replace Git,
+only to make it easier to work with Git in the context of Android.  The repo
+command is an executable Python script that you can put anywhere in your path.
+
+
+Fri Jan 15 11:32:09 AKST 2016
+=============================
+o Unable to get repo working.  Think I need to right my own script to checkout
+hierarchical git repositories.
+
+manifest format:
+  source_git_path   target_directory
+
+
+o Test repo of GCI Network Services, OSS workstation
+
+$ cd ~/git
+$ repo sync
+Username for 'https://android.googlesource.com': marcilr
+Password for 'https://marcilr@android.googlesource.com': ***
+
+NOTE: This does not work since ~/git/.repo/.git is configured
+      for android.googlesource.com:
+
+~/git/.repo/.git/manifests.git/config:5: url = https://android.googlesource.com/a/platform/manifest
+
+Temporarily manifests.git/ out of the way:
+covellite:~/git/.repo$ mv manifests.git/ ~/Documents
+
+Attempt repo sync again:
+$ cd ~/git
+$ repo sync
+  File "/home/marcilr/git/.repo/repo/main.py", line 531, in <module>
+    _Main(sys.argv[1:])
+  File "/home/marcilr/git/.repo/repo/main.py", line 507, in _Main
+    result = repo._Run(argv) or 0
+  File "/home/marcilr/git/.repo/repo/main.py", line 158, in _Run
+    copts, cargs = cmd.OptionParser.parse_args(argv)
+  File "/home/marcilr/git/.repo/repo/command.py", line 67, in OptionParser
+    self._Options(self._optparse)
+  File "/home/marcilr/git/.repo/repo/subcmds/sync.py", line 186, in _Options
+    self.jobs = self.manifest.default.sync_j
+  File "/home/marcilr/git/.repo/repo/manifest_xml.py", line 352, in default
+    self._Load()
+  File "/home/marcilr/git/.repo/repo/manifest_xml.py", line 420, in _Load
+    self._ParseManifest(nodes)
+  File "/home/marcilr/git/.repo/repo/manifest_xml.py", line 473, in _ParseManifest
+    remote = self._ParseRemote(node)
+  File "/home/marcilr/git/.repo/repo/manifest_xml.py", line 646, in _ParseRemote
+    return _XmlRemote(name, alias, fetch, manifestUrl, review, revision)
+  File "/home/marcilr/git/.repo/repo/manifest_xml.py", line 76, in __init__
+    self.resolvedFetchUrl = self._resolveFetchUrl()
+  File "/home/marcilr/git/.repo/repo/manifest_xml.py", line 86, in _resolveFetchUrl
+    manifestUrl = self.manifestUrl.rstrip('/')
+AttributeError: 'NoneType' object has no attribute 'rstrip'
+$
+
+covellite:~/git$ ls .repo/repo/main.py 
+.repo/repo/main.py
+covellite:~/git$
+
+
+
+Links
+=====
+git-repo
+repo - The multiple repository tool
+https://code.google.com/p/git-repo/
