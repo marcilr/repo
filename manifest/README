@@ -1,0 +1,16 @@
+README
+Created Tue Nov 10 10:36:56 AKST 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+links.txt
+  Manifest related links
+
+manifest.txt
+  Manifest
+
+manifest-format.txt
+  repo Manifest Format
+  https://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.txt
