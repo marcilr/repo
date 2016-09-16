@@ -1,0 +1,25 @@
+manifest.txt
+Created Tue Nov 10 10:35:28 AKST 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Manifest
+
+
+A repo manifest describes the structure of a repo client; that is the
+directories that are visible and where they should be obtained from with git.
+
+The basic structure of a manifest is a bare Git repository holding a single
+'default.xml' XML file in the top level directory.
+
+Manifests are inherently version controlled, since they are kept within a Git
+repository.  Updates to manifests are automatically obtained by clients during
+`repo sync`.
+
+gerrit.googlesource.com/
+
+
+Links
+=====
+manifest-format.txt
+https://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.txt
