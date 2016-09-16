@@ -1,0 +1,19 @@
+README
+Created Tue Nov 10 09:32:14 AKST 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+command-reference.txt
+  Repo command reference
+  http://source.android.com/source/using-repo.html
+
+links.txt
+  Syntax related links
+
+syntax.txt
+  Syntax
+
+TODO
+  Syntax TODO items

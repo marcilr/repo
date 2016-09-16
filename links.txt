@@ -1,0 +1,21 @@
+links.txt
+Created Tue Nov 10 09:33:54 AKST 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Syntax related links
+
+
+Links
+=====
+oe-repo-manifest
+Fine README.md showing use of repo manifest for repo checkout.
+https://github.com/kergoth/oe-repo-manifest
+
+Repo command reference
+http://source.android.com/source/using-repo.html
+
+Using Google's repo command in your own projects   <===
+by wroberts3
+Wow, great page
+http://www.instructables.com/id/Using-Googles-repo-command-in-your-own-projects/
