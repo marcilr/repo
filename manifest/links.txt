@@ -1,0 +1,34 @@
+links.txt
+Created Tue Nov 10 10:36:32 AKST 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Manifest related links
+
+
+Links
+=====
+manifest-format.txt
+https://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.txt
+
+Re: repo + private repositories in github
+o Very simple manifest file here.
+<?xml version="1.0" encoding="UTF-8"?> 
+<manifest> 
+  <remote name="myproject" fetch="git@github.com:myproject/" />
+  <default revision="master" remote="myprojecy" /> 
+  <project path="someapp" name="someappe" remote="myproject"/> 
+</manifest> 
+NOTE: Think the above needs to use the canonical ssh url ssh://
+      syntax to specify the idenity.
+o Also has ssh and ~./ssh/config notes.
+https://groups.google.com/forum/embed/#!topic/repo-discuss/kCXO-NdFvj4
+
+repo manifest documentation?
+No docs but very good comments.
+https://groups.google.com/forum/#!topic/repo-discuss/qUlkBNoWRNM
+
+Using Google's repo command in your own projects   <===
+by wroberts3
+Wow, great page
+http://www.instructables.com/id/Using-Googles-repo-command-in-your-own-projects
